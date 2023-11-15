@@ -1,31 +1,29 @@
-
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 import '../controller/pos_controller.dart';
 
 class PosView extends StatefulWidget {
-    const PosView({Key? key}) : super(key: key);
+  const PosView({Key? key}) : super(key: key);
 
-    Widget build(context, PosController controller) {
+  Widget build(context, PosController controller) {
     controller.view = this;
 
     return Scaffold(
-        appBar: AppBar(
+      appBar: AppBar(
         title: const Text("Pos"),
         actions: const [],
-        ),
-        body: SingleChildScrollView(
+      ),
+      body: SingleChildScrollView(
         child: Container(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
             children: const [],
-            ),
+          ),
         ),
-        ),
+      ),
     );
-    }
+  }
 
-    @override
-    State<PosView> createState() => PosController();
+  @override
+  State<PosView> createState() => PosController();
 }
-    
