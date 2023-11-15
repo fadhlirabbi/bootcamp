@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/main_controller.dart';
 
 class MainView extends StatefulWidget {
   const MainView({Key? key}) : super(key: key);
@@ -15,11 +14,12 @@ class MainView extends StatefulWidget {
       "OrderService",
     ];
     List viewList = [
-      "LoginView",
-      "ProductListView",
-      "ProductFormView",
-      "CustomerListView",
-      "CustomerFormView",
+      LoginView(),
+      MainNavigationView(),
+      ProductListView(),
+      CustomerListView(),
+      PosView(),
+      OrderListView(),
     ];
 
     return Scaffold(
@@ -103,36 +103,39 @@ class MainView extends StatefulWidget {
                 physics: ScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   var item = viewList[index];
-                  return Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0x19000000),
-                          blurRadius: 24,
-                          offset: Offset(0, 11),
-                        ),
-                      ],
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(12.0),
-                      ),
-                      border: Border.all(
-                        width: 0.4,
-                        color: Colors.grey[400]!,
-                      ),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "$item",
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            overflow: TextOverflow.ellipsis,
-                            fontWeight: FontWeight.bold,
+                  return InkWell(
+                    onTap: () => Get.to(item),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0x19000000),
+                            blurRadius: 24,
+                            offset: Offset(0, 11),
                           ),
+                        ],
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(12.0),
                         ),
-                      ],
+                        border: Border.all(
+                          width: 0.4,
+                          color: Colors.grey[400]!,
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "$item",
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              overflow: TextOverflow.ellipsis,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 },

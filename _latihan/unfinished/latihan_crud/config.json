@@ -1,11 +1,16 @@
 {
     "modules": [
         "main",
+        "auth/login",
+        "main_navigation",
+        "dashboard",
         "product_list",
         "product_form",
         "customer_list",
         "customer_form",
-        "auth/login"
+        "pos",
+        "order_list",
+        "profile"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,
