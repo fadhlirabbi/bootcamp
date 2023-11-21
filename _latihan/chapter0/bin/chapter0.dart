@@ -1,3 +1,8 @@
+// import 'dart:js_interop';
+
+import 'dart:ffi';
+// import 'dart:svg';
+
 import 'package:test/test.dart';
 
 class Chapter0 {
@@ -1332,7 +1337,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel int? output;
     // ? Instruksi 3: Konversi input menjadi integer dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    double input = 3.14;
+    int? output;
+    output = input.toInt();
     // --- End of Answer ---
     return output is int && output == 3;
   }
@@ -1342,7 +1349,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel int? output;
     // ? Instruksi 3: Konversi input menjadi integer dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    double input = 9.99;
+    int? output;
+    output = input.toInt();
     // --- End of Answer ---
     return output is int && output == 9;
   }
@@ -1352,7 +1361,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel int? output;
     // ? Instruksi 3: Konversi input menjadi integer dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    double input = 5.5;
+    int? output;
+    output = input.toInt();
     // --- End of Answer ---
     return output is int && output == 5;
   }
@@ -1362,7 +1373,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel int? output;
     // ? Instruksi 3: Konversi input menjadi integer dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    bool input = true;
+    int? output;
+    output = input ? 1 : 0;
     // --- End of Answer ---
     return output is int && output == 1;
   }
@@ -1372,7 +1385,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel int? output;
     // ? Instruksi 3: Konversi input menjadi integer dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    bool input = false;
+    int? output;
+    output = input ? 1 : 0;
     // --- End of Answer ---
     return output is int && output == 0;
   }
@@ -1382,7 +1397,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel int? output;
     // ? Instruksi 3: Konversi input menjadi integer dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    bool input = true;
+    int? output;
+    output = input ? 1 : 0;
     // --- End of Answer ---
     return output is int && output == 1;
   }
@@ -1392,7 +1409,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel int? output;
     // ? Instruksi 3: Konversi input menjadi integer dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "123";
+    int? output;
+    output = int.parse(input);
     // --- End of Answer ---
     return output is int && output == 123;
   }
@@ -1402,7 +1421,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel double? output;
     // ? Instruksi 3: Konversi input menjadi double dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "3.14";
+    double? output;
+    output = double.parse(input);
     // --- End of Answer ---
     return output is double && output == 3.14;
   }
@@ -1412,7 +1433,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel double? output;
     // ? Instruksi 3: Konversi input menjadi double dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "9.99";
+    double? output;
+    output = double.parse(input);
     // --- End of Answer ---
     return output is double && output == 9.99;
   }
@@ -1422,7 +1445,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel double? output;
     // ? Instruksi 3: Konversi input menjadi double dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "5.5";
+    double? output;
+    output = double.parse(input);
     // --- End of Answer ---
     return output is double && output == 5.5;
   }
@@ -1432,7 +1457,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Konversi input menjadi boolean dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "true";
+    bool? output;
+    output = bool.parse(input);
     // --- End of Answer ---
     return output is bool && output == true;
   }
@@ -1442,7 +1469,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Konversi input menjadi boolean dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "false";
+    bool? output;
+    output = bool.parse(input);
     // --- End of Answer ---
     return output is bool && output == false;
   }
@@ -1452,7 +1481,10 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Konversi input menjadi boolean dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "0";
+    bool? output;
+    int konversiString = int.parse(input);
+    output = konversiString != 0;
     // --- End of Answer ---
     return output is bool && output == false;
   }
@@ -1462,7 +1494,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel String? output;
     // ? Instruksi 3: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "Hello, World!";
+    String? output = input;
     // --- End of Answer ---
     return output is String && output == "Hello, World!";
   }
@@ -1472,7 +1505,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel String? output;
     // ? Instruksi 3: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    int input = 2022;
+    String? output = input.toString();
     // --- End of Answer ---
     return output is String && output == "2022";
   }
@@ -1482,7 +1516,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel String? output;
     // ? Instruksi 3: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    double input = 3.14159;
+    String? output = input.toString();
     // --- End of Answer ---
     return output is String && output == "3.14159";
   }
@@ -1492,7 +1527,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel String? output;
     // ? Instruksi 3: Konversi input menjadi String dengan format "yyyy-MM-dd" dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    DateTime input = DateTime(2023, 8, 9);
+    String? output = input.toIso8601String().substring(0, 10);
     // --- End of Answer ---
     return output is String && output == "2023-08-09";
   }
@@ -1502,7 +1538,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Konversi input menjadi boolean dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "true";
+    bool? output = bool.parse(input);
     // --- End of Answer ---
     return output is bool && output == true;
   }
@@ -1512,7 +1549,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Konversi input menjadi boolean dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "false";
+    bool? output = bool.parse(input);
     // --- End of Answer ---
     return output is bool && output == false;
   }
@@ -1522,7 +1560,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Konversi input menjadi boolean dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "0";
+    bool? output = input != "0";
     // --- End of Answer ---
     return output is bool && output == false;
   }
@@ -1532,7 +1571,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel String? output;
     // ? Instruksi 3: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    bool input = true;
+    String? output = '$input';
+    // juga bisa menggunakan input.toString();
     // --- End of Answer ---
     return output is String && output == "true";
   }
@@ -1542,7 +1583,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel String? output;
     // ? Instruksi 3: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    bool input = false;
+    String? output = input.toString();
     // --- End of Answer ---
     return output is String && output == "false";
   }
@@ -1552,7 +1594,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel String? output;
     // ? Instruksi 3: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    int input = 42;
+    String? output = input.toString();
     // --- End of Answer ---
     return output is String && output == "42";
   }
@@ -1562,7 +1605,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel String? output;
     // ? Instruksi 3: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    double input = 3.14;
+    String? output = input.toString();
     // --- End of Answer ---
     return output is String && output == "3.14";
   }
@@ -1572,7 +1616,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel double? output;
     // ? Instruksi 3: Konversi input menjadi double dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "9.99";
+    double? output = double.parse(input);
     // --- End of Answer ---
     return output is double && output == 9.99;
   }
@@ -1582,7 +1627,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel double? output;
     // ? Instruksi 3: Konversi input menjadi double dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "3.14";
+    double? output = double.parse(input);
     // --- End of Answer ---
     return output is double && output == 3.14;
   }
@@ -1592,7 +1638,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel double? output;
     // ? Instruksi 3: Konversi input menjadi double dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "5.5";
+    double? output = double.parse(input);
     // --- End of Answer ---
     return output is double && output == 5.5;
   }
@@ -1602,7 +1649,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Konversi input menjadi boolean dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "true";
+    bool? output = bool.parse(input);
     // --- End of Answer ---
     return output is bool && output == true;
   }
@@ -1612,7 +1660,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Konversi input menjadi boolean dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "false";
+    bool? output = bool.parse(input);
     // --- End of Answer ---
     return output is bool && output == false;
   }
@@ -1622,7 +1671,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Konversi input menjadi boolean dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "0";
+    bool? output = input != "0";
     // --- End of Answer ---
     return output is bool && output == false;
   }
@@ -1632,7 +1682,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel String? output;
     // ? Instruksi 3: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    bool input = true;
+    String? output = input.toString();
     // --- End of Answer ---
     return output is String && output == "true";
   }
@@ -1642,7 +1693,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel String? output;
     // ? Instruksi 3: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    bool input = false;
+    String? output = input.toString();
     // --- End of Answer ---
     return output is String && output == "false";
   }
@@ -1652,7 +1704,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel String? output;
     // ? Instruksi 3: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    int input = 42;
+    String? output = input.toString();
     // --- End of Answer ---
     return output is String && output == "42";
   }
@@ -1662,7 +1715,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel String? output;
     // ? Instruksi 3: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    double input = 3.14;
+    String output = input.toString();
     // --- End of Answer ---
     return output is String && output == "3.14";
   }
@@ -1672,7 +1726,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel double? output;
     // ? Instruksi 3: Konversi input menjadi double dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "9.99";
+    double? output = double.parse(input);
     // --- End of Answer ---
     return output is double && output == 9.99;
   }
@@ -1682,7 +1737,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel double? output;
     // ? Instruksi 3: Konversi input menjadi double dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "3.14";
+    double? output = double.parse(input);
     // --- End of Answer ---
     return output is double && output == 3.14;
   }
@@ -1692,7 +1748,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel double? output;
     // ? Instruksi 3: Konversi input menjadi double dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "5.5";
+    double? output = double.parse(input);
     // --- End of Answer ---
     return output is double && output == 5.5;
   }
@@ -1702,7 +1759,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel DateTime? output;
     // ? Instruksi 3: Konversi input menjadi DateTime dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "2023-08-09";
+    DateTime? output = DateTime.parse(input);
     // --- End of Answer ---
     return output is DateTime &&
         output.year == 2023 &&
@@ -1715,7 +1773,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel DateTime? output;
     // ? Instruksi 3: Konversi input menjadi DateTime dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "1999-12-31";
+    DateTime? output = DateTime.parse(input);
     // --- End of Answer ---
     return output is DateTime &&
         output.year == 1999 &&
@@ -1728,7 +1787,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel DateTime? output;
     // ? Instruksi 3: Konversi input menjadi DateTime dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "2022-01-15";
+    DateTime? output = DateTime.parse(input);
     // --- End of Answer ---
     return output is DateTime &&
         output.year == 2022 &&
@@ -1741,7 +1801,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel DateTime? output;
     // ? Instruksi 3: Konversi input menjadi DateTime dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "1987-05-25";
+    DateTime output = DateTime.parse(input);
     // --- End of Answer ---
     return output is DateTime &&
         output.year == 1987 &&
@@ -1754,7 +1815,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel DateTime? output;
     // ? Instruksi 3: Konversi input menjadi DateTime dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "2025-10-01";
+    DateTime? output = DateTime.parse(input);
     // --- End of Answer ---
     return output is DateTime &&
         output.year == 2025 &&
@@ -1767,7 +1829,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<int>? output;
     // ? Instruksi 3: Konversi input menjadi List<int> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<int> input = [1, 2, 3, 4, 5];
+    List<int>? output = input;
     // --- End of Answer ---
     return output is List<int> &&
         output.length == 5 &&
@@ -1780,7 +1843,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<String>? output;
     // ? Instruksi 3: Konversi input menjadi List<String> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<String> input = ["apple", "banana", "cherry"];
+    List<String> output = input;
     // --- End of Answer ---
     return output is List<String> &&
         output.length == 3 &&
@@ -1793,12 +1857,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<double>? output;
     // ? Instruksi 3: Konversi input menjadi List<double> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<double> input = [3.14, 2.71, 1.618];
+    List<double>? output = input;
     // --- End of Answer ---
-    return output is List<double> &&
-        output.length == 3 &&
-        output[0] == 3.14 &&
-        output[2] == 1.618;
+    return output is List<double> && output.length == 3;
+    output[0] == 3.14 && output[2] == 1.618;
   }
 
   bool? exercise129() {
@@ -1806,7 +1869,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel Map<String, int>? output;
     // ? Instruksi 3: Konversi input menjadi Map<String, int> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<String, int> input = {"apple": 2, "banana": 3, "cherry": 5};
+    Map<String, int> output = input;
     // --- End of Answer ---
     return output is Map<String, int> &&
         output.length == 3 &&
@@ -1819,7 +1883,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel Map<String, double>? output;
     // ? Instruksi 3: Konversi input menjadi Map<String, double> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<String, double> input = {"pi": 3.14, "e": 2.71, "phi": 1.618};
+    Map<String, double>? output = input;
     // --- End of Answer ---
     return output is Map<String, double> &&
         output.length == 3 &&
@@ -1832,7 +1897,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel Map<String, dynamic>? output;
     // ? Instruksi 3: Konversi input menjadi Map<String, dynamic> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<String, dynamic> input = {"name": "John", "age": 30, "isStudent": true};
+    Map<String, dynamic> output = input;
     // --- End of Answer ---
     return output is Map<String, dynamic> &&
         output.length == 3 &&
@@ -1845,7 +1911,12 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel Map<String, dynamic>? output;
     // ? Instruksi 3: Konversi input menjadi Map<String, dynamic> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<String, dynamic> input = {
+      "title": "Book",
+      "price": 20.99,
+      "isAvailable": false
+    };
+    Map<String, dynamic>? output = input;
     // --- End of Answer ---
     return output is Map<String, dynamic> &&
         output.length == 3 &&
@@ -1858,7 +1929,12 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<Map<String, int>>? output;
     // ? Instruksi 3: Konversi input menjadi List<Map<String, int>> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, int>> input = [
+      {"score": 90},
+      {"score": 85},
+      {"score": 95}
+    ];
+    List<Map<String, int>>? output = input;
     // --- End of Answer ---
     return output is List<Map<String, int>> &&
         output.length == 3 &&
@@ -1871,7 +1947,12 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<Map<String, dynamic>>? output;
     // ? Instruksi 3: Konversi input menjadi List<Map<String, dynamic>> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, dynamic>> input = [
+      {"name": "Alice"},
+      {"name": "Bob"},
+      {"name": "Charlie"}
+    ];
+    List<Map<String, dynamic>>? output = input;
     // --- End of Answer ---
     return output is List<Map<String, dynamic>> &&
         output.length == 3 &&
@@ -1884,7 +1965,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<Map<String, dynamic>>? output;
     // ? Instruksi 3: Konversi input menjadi List<Map<String, dynamic>> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, dynamic>> input = [
+      {"city": "New York", "population": 8378394},
+      {"city": "Los Angeles", "population": 3990456}
+    ];
+    List<Map<String, dynamic>>? output = input;
     // --- End of Answer ---
     return output is List<Map<String, dynamic>> &&
         output.length == 2 &&
@@ -1897,7 +1982,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<Map<String, dynamic>>? output;
     // ? Instruksi 3: Konversi input menjadi List<Map<String, dynamic>> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, dynamic>> input = [
+      {"name": "Alice", "age": 25},
+      {"name": "Bob", "age": 30}
+    ];
+    List<Map<String, dynamic>> output = input;
     // --- End of Answer ---
     return output is List<Map<String, dynamic>> &&
         output.length == 2 &&
@@ -1910,7 +1999,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<Map<String, dynamic>>? output;
     // ? Instruksi 3: Konversi input menjadi List<Map<String, dynamic>> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, dynamic>> input = [
+      {"country": "USA", "capital": "Washington, D.C."},
+      {"country": "Canada", "capital": "Ottawa"}
+    ];
+    List<Map<String, dynamic>> output = input;
     // --- End of Answer ---
     return output is List<Map<String, dynamic>> &&
         output.length == 2 &&
@@ -1923,7 +2016,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<Map<String, dynamic>>? output;
     // ? Instruksi 3: Konversi input menjadi List<Map<String, dynamic>> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, dynamic>> input = [
+      {"code": "A1", "value": 10},
+      {"code": "B2", "value": 20}
+    ];
+    List<Map<String, dynamic>> output = input;
     // --- End of Answer ---
     return output is List<Map<String, dynamic>> &&
         output.length == 2 &&
@@ -1936,7 +2033,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<Map<String, dynamic>>? output;
     // ? Instruksi 3: Konversi input menjadi List<Map<String, dynamic>> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, dynamic>> input = [
+      {"item": "Apple", "price": 1.99},
+      {"item": "Banana", "price": 0.99}
+    ];
+    List<Map<String, dynamic>> output = input;
     // --- End of Answer ---
     return output is List<Map<String, dynamic>> &&
         output.length == 2 &&
@@ -1949,7 +2050,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<Map<String, dynamic>>? output;
     // ? Instruksi 3: Konversi input menjadi List<Map<String, dynamic>> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, dynamic>> input = [
+      {"name": "Alice", "age": 25},
+      {"name": "Bob", "age": 30}
+    ];
+    List<Map<String, dynamic>> output = input;
     // --- End of Answer ---
     return output is List<Map<String, dynamic>> &&
         output.length == 2 &&
@@ -1962,7 +2067,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<Map<String, dynamic>>? output;
     // ? Instruksi 3: Konversi input menjadi List<Map<String, dynamic>> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, dynamic>> input = [
+      {"city": "New York", "population": 8378394},
+      {"city": "Los Angeles", "population": 3990456}
+    ];
+    List<Map<String, dynamic>>? output = input;
     // --- End of Answer ---
     return output is List<Map<String, dynamic>> &&
         output.length == 2 &&
@@ -1975,7 +2084,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<Map<String, dynamic>>? output;
     // ? Instruksi 3: Konversi input menjadi List<Map<String, dynamic>> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, dynamic>> input = [
+      {"country": "USA", "capital": "Washington, D.C."},
+      {"country": "Canada", "capital": "Ottawa"}
+    ];
+    List<Map<String, dynamic>>? output = input;
     // --- End of Answer ---
     return output is List<Map<String, dynamic>> &&
         output.length == 2 &&
@@ -1988,7 +2101,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<Map<String, dynamic>>? output;
     // ? Instruksi 3: Konversi input menjadi List<Map<String, dynamic>> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, dynamic>> input = [
+      {"code": "A1", "value": 10},
+      {"code": "B2", "value": 20}
+    ];
+    List<Map<String, dynamic>>? output = input;
     // --- End of Answer ---
     return output is List<Map<String, dynamic>> &&
         output.length == 2 &&
@@ -2001,7 +2118,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<Map<String, dynamic>>? output;
     // ? Instruksi 3: Konversi input menjadi List<Map<String, dynamic>> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, dynamic>> input = [
+      {"item": "Apple", "price": 1.99},
+      {"item": "Banana", "price": 0.99}
+    ];
+    List<Map<String, dynamic>>? output = input;
     // --- End of Answer ---
     return output is List<Map<String, dynamic>> &&
         output.length == 2 &&
@@ -2014,7 +2135,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Gunakan operator conditional Jika input["age"] == 25, atur nilai output menjadi true
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<String, dynamic> input = {"name": "Alice", "age": 25};
+    bool? output;
+    if (input["age"] == 25) {
+      output = true;
+    }
     // --- End of Answer ---
     return output == true;
   }
@@ -2024,7 +2149,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Gunakan operator conditional Jika input["isDiscounted"] == 1, atur nilai output menjadi true
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<String, dynamic> input = {"amount": 20.5, "isDiscounted": 1};
+    bool? output;
+    if (input["isDiscounted"] == 1) {
+      output = true;
+    }
     // --- End of Answer ---
     return output == true;
   }
@@ -2034,7 +2163,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Gunakan operator conditional Jika input["isActive"] == "true", atur nilai output menjadi true
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<String, dynamic> input = {"isActive": "true"};
+    bool? output;
+    if (input["isActive"] == "true") {
+      output = true;
+    }
     // --- End of Answer ---
     return output == true;
   }
@@ -2044,7 +2177,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Gunakan operator conditional Jika input["hasPermission"] == "false", atur nilai output menjadi true
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<String, dynamic> input = {"hasPermission": "false"};
+    bool? output;
+    if (input["hasPermission"] == "false") {
+      output = true;
+    }
     // --- End of Answer ---
     return output == true;
   }
@@ -2054,7 +2191,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Gunakan operator conditional Jika input["isAvailable"] == "1", atur nilai output menjadi true
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<String, dynamic> input = {"isAvailable": "1"};
+    bool? output;
+    if (input["isAvailable"] == "1") {
+      output = true;
+    }
     // --- End of Answer ---
     return output == true;
   }
@@ -2064,7 +2205,11 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel bool? output;
     // ? Instruksi 3: Gunakan operator conditional Jika input["isEnabled"] == "0", atur nilai output menjadi true
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<String, dynamic> input = {"isEnabled": "0"};
+    bool? output;
+    if (input["isEnabled"] == "0") {
+      output = true;
+    }
     // --- End of Answer ---
     return output == true;
   }
@@ -2074,7 +2219,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<String>? output;
     // ? Instruksi 3: Konversi nilai dari input menjadi List<String> dengan memisahkan string berdasarkan koma (",") dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "apple,banana,orange";
+    List<String>? output = input.split(",");
     // --- End of Answer ---
     return output is List<String> &&
         output.length == 3 &&
@@ -2088,7 +2234,8 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<int>? output;
     // ? Instruksi 3: Konversi nilai dari input menjadi List<int> dengan memisahkan string berdasarkan koma (",") dan mengkonversi setiap nilai menjadi integer, kemudian tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "42,38,56,29";
+    List<int>? output = input.split(",").map((num) => int.parse(num)).toList();
     // --- End of Answer ---
     return output is List<int> &&
         output.length == 4 &&
@@ -2098,12 +2245,17 @@ class Chapter0 {
         output.contains(29);
   }
 
+  // input.split(",").map((value) => value.toLowerCase() == "true").toList();
+
   bool? exercise153() {
     // ? Instruksi 1: Buatlah variabel String input dengan nilai "true,false,true,false"
     // ? Instruksi 2: Buatlah variabel List<bool>? output;
     // ? Instruksi 3: Konversi nilai dari input menjadi List<bool> dengan memisahkan string berdasarkan koma (",") dan mengkonversi setiap nilai menjadi boolean, kemudian tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "true,false,true,false";
+    List<bool>? output =
+        input.split(",").map((value) => value == "true").toList();
+    // input.split(",").map((value) => value.toLowerCase() == "true").toList();
     // --- End of Answer ---
     return output is List<bool> &&
         output.length == 4 &&
@@ -2116,7 +2268,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<double>? output;
     // ? Instruksi 3: Konversi nilai dari input menjadi List<double> dengan memisahkan string berdasarkan koma (",") dan mengkonversi setiap nilai menjadi double, kemudian tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "3.14,2.718,1.618";
+    List<double>? output =
+        input.split(",").map((num) => double.parse(num)).toList();
     // --- End of Answer ---
     return output is List<double> &&
         output.length == 3 &&
@@ -2130,7 +2284,9 @@ class Chapter0 {
     // ? Instruksi 2: Buatlah variabel List<DateTime>? output;
     // ? Instruksi 3: Konversi nilai dari input menjadi List<DateTime> dengan memisahkan string berdasarkan koma (",") dan mengkonversi setiap nilai menjadi DateTime, kemudian tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "2022-01-01,2023-05-15,2024-10-30";
+    List<DateTime>? output =
+        input.split(",").map((date) => DateTime.parse(date)).toList();
     // --- End of Answer ---
     return output is List<DateTime> && output.length == 3;
   }
@@ -2140,7 +2296,9 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel List<int>? output;
     // ? Instruksi: Konversi input menjadi List<int> dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "1,2,3,4,5";
+    List<int>? output =
+        input.split(",").map((String num) => int.parse(num)).toList();
     // --- End of Answer ---
 
     return output is List<int>;
@@ -2151,6 +2309,8 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel double? output;
     // ? Instruksi: Konversi input menjadi double dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
+    String input = "3.14";
+    double? output = double.parse(input);
 
     // --- End of Answer ---
 
@@ -2162,20 +2322,20 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel bool? output;
     // ? Instruksi: Konversi input menjadi bool dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    String input = "true";
+    bool? output = bool.parse(input);
     // --- End of Answer ---
-
     return output is bool && output;
   }
 
   bool? exercise159() {
     // ? Instruksi: Buatlah variabel int input dengan nilai 42
-    // ? Instruksi: Buatlah variabel bool? output;
+    // ? Instruksi: Buatlah variabel bool? output;              //String ??
     // ? Instruksi: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    int input = 42;
+    String? output = input.toString();
     // --- End of Answer ---
-
     return output is String && output == "42";
   }
 
@@ -2184,7 +2344,8 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel String? output;
     // ? Instruksi: Konversi input menjadi String dan tampung di dalam variabel output
     // TODO: Tulis jawabanmu di bawah ini
-
+    double input = 3.14;
+    String? output = input.toString();
     // --- End of Answer ---
 
     return output is String && output == "3.14";
@@ -2195,7 +2356,8 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel bool? output;
     // ? Instruksi: Konversi input menjadi String dan cek apakah string "3" terdapat dalam output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<int> input = [1, 2, 3, 4, 5];
+    bool? output = input.map((number) => number.toString()).contains("3");
     // --- End of Answer ---
 
     return output is bool && output;
@@ -2206,7 +2368,8 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel bool? output;
     // ? Instruksi: Konversi input menjadi String dan cek apakah string "grape" terdapat dalam output
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<String> input = ["apple", "banana", "cherry"];
+    bool? output = input.any((value) => value.contains("grape"));
     // --- End of Answer ---
 
     return output is bool && !output;
@@ -2218,8 +2381,9 @@ class Chapter0 {
     // ? Instruksi: Konversi input menjadi List<String> dengan mengubah setiap elemen menjadi string
     // TODO: Tulis jawabanmu di bawah ini
 
+    List<int> input = [10, 20, 30, 40, 50];
+    List<String> output = input.map((element) => element.toString()).toList();
     // --- End of Answer ---
-
     return output is List<String> &&
         output.every((element) => element is String);
   }
@@ -2229,7 +2393,8 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel bool? output;
     // ? Instruksi: Konversi input menjadi List<String> dengan mengambil semua kunci (keys) dari map
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<String, int> input = {"apple": 3, "banana": 2};
+    List<String> output = input.keys.toList();
     // --- End of Answer ---
 
     return output is List<String> &&
