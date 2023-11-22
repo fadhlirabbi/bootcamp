@@ -1,6 +1,8 @@
 // import 'dart:js_interop';
 
 import 'dart:ffi';
+// import 'dart:html';
+// import 'dart:html';
 // import 'dart:svg';
 
 import 'package:test/test.dart';
@@ -2406,7 +2408,8 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel bool? output;
     // ? Instruksi: Konversi input menjadi List<int> dengan mengambil semua nilai (values) dari map
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<int, String> input = {1: "one", 2: "two"};
+    List<String> output = input.values.toList();
     // --- End of Answer ---
 
     return output is List<String> &&
@@ -2418,7 +2421,11 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel bool? output;
     // ? Instruksi: Konversi input menjadi List<int> dengan mengambil semua nilai dari map-map di dalam list
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, int>> input = [
+      {"apple": 3},
+      {"banana": 2}
+    ];
+    List<int> output = input.expand((map) => map.values).toList();
     // --- End of Answer ---
 
     return output is List<int> && output.every((element) => element is int);
@@ -2429,9 +2436,9 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel bool? output;
     // ? Instruksi: Konversi input menjadi List<dynamic> dengan mengambil semua nilai dari map
     // TODO: Tulis jawabanmu di bawah ini
-
+    Map<String, dynamic> input = {"age": 25, "name": "Jonh"};
+    List<dynamic> output = input.values.toList();
     // --- End of Answer ---
-
     return output is List<dynamic>;
   }
 
@@ -2440,7 +2447,12 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel bool? output;
     // ? Instruksi: Konversi input menjadi Map<String, int> dengan mengubah setiap elemen menjadi pasangan kunci "number" dan nilai elemen
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<int> input = [1, 2, 3, 4, 5];
+    Map<String, int> output = Map.fromIterable(
+      input,
+      key: (number) => "number",
+      value: (number) => number,
+    );
     // --- End of Answer ---
 
     return output is Map<String, int> && output.containsKey("number");
@@ -2451,7 +2463,9 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel bool? output;
     // ? Instruksi: Konversi input menjadi Map<String, String> dengan mengubah setiap elemen menjadi pasangan kunci dan nilai yang sama
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<String> input = ["apple", "banana", "cherry"];
+    Map<String, String>? output =
+        Map.fromIterable(input, key: (e) => e, value: (e) => e);
     // --- End of Answer ---
 
     return output is Map<String, String>;
@@ -2462,7 +2476,12 @@ class Chapter0 {
     // ? Instruksi: Buatlah variabel bool? output;
     // ? Instruksi: Konversi input menjadi Map<String, int> dengan mengambil pasangan kunci "apple" dan nilai dari map pertama dalam list
     // TODO: Tulis jawabanmu di bawah ini
-
+    List<Map<String, int>> input = [
+      {"apple": 3},
+      {"banana": 2}
+    ];
+    Map<String, int> output =
+        Map.fromIterable(input, key: (String) => String, value: (num) => num);
     // --- End of Answer ---
 
     return output is Map<String, int> && output.containsKey("apple");
@@ -3209,4 +3228,3 @@ class Chapter0 {
         output["cherry"] == DateTime(2024, 3, 3);
   }
 }
-lat
